@@ -1,0 +1,10 @@
+{
+    "configurations": {
+        "production": {
+            "fileReplacement": [{
+                "replace": "src/environments/environment.js",
+                "with": "src/environments/environment.prod.js"
+            }]
+        }
+    }
+}

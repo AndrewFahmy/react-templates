@@ -1,0 +1,20 @@
+{
+  "name": "default-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "rcli serve -o",
+    "build": "npm run lint && rcli build",
+    "lint": "npx eslint src/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-react": "^7.20.0"
+  }
+}
