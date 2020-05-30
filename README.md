@@ -1,5 +1,5 @@
 # Defaut Template
-The most basic template which contains basic react packages on support for typescript.
+The most basic template which contains basic react packages and support for typescript.
 
 ## Usage
 
