@@ -2,7 +2,6 @@
   "name": "js-template",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
     "lint": "npx eslint src/*",
     "build": "npm run lint && npx webpack --config ./config/webpack.prod.js",
