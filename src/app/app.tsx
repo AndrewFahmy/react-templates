@@ -1,5 +1,6 @@
+  
 import React, { ReactElement } from 'react';
-import logo from './images/logo.svg';
+import logo from '../assets/images/logo.svg';
 import './app.scss';
 
 
