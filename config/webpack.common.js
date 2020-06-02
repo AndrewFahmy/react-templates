@@ -96,21 +96,8 @@ function generateRules(env) {
 }
 
 
-function configureErrorPlugin() {
-    return function () {
-        this.plugin('done', function (stats) {
-            if (stats.compilation.errors && stats.compilation.errors.length) {
-                console.error(stats.compilation.errors);
-                process.exit(1);
-            }
-        });
-    };
-}
-
-
 function generatePlugins(env) {
     return [
-        configureErrorPlugin(),
         new progressPlugin(),
 
         new cssParsingPlugin({
