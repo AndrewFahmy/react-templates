@@ -79,10 +79,10 @@ function configureFileReplacementLoader(env) {
     const environment = String(env).toLowerCase();
 
     if (environment === 'production') return {
-        test: path.resolve('src/environments/environent.js'),
+        test: path.resolve('src/environments/environment.js'),
         loader: 'file-replace-loader',
         options: {
-            replacement: path.resolve('src/environments/environent.prod.js'),
+            replacement: path.resolve('src/environments/environment.prod.js'),
             async: true
         }
     };
