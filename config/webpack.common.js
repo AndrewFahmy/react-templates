@@ -74,20 +74,7 @@ function configureFontLoader() {
         ]
     };
 }
-function configureDataAssetsLoader() {
-    return {
-        test: /\.(json|xml)$/,
-        use: [
-            {
-                loader: require.resolve('file-loader'),
-                options: {
-                    outputPath: 'assets/data',
-                    name: '[name]_[contenthash:8].[ext]'
-                }
-            }
-        ]
-    };
-}
+
 function configureFileReplacementLoader(env) {
     const environment = String(env).toLowerCase();
 
@@ -109,7 +96,6 @@ function generateRules(env) {
         configureStylesLoader(),
         configureImageLoader(),
         configureFontLoader(),
-        configureDataAssetsLoader(),
         configureFileReplacementLoader(env)
     ];
 }
