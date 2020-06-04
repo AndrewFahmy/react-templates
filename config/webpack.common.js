@@ -51,21 +51,6 @@ function configureFontLoader() {
     };
 }
 
-function configureFileReplacementLoader(env) {
-    const environment = String(env).toLowerCase();
-
-    if (environment === 'production') return {
-        test: path.resolve('src/environments/environment.ts'),
-        loader: 'file-replace-loader',
-        options: {
-            replacement: path.resolve('src/environments/environment.prod.ts'),
-            async: true
-        }
-    };
-
-    else return {};
-}
-
 function generateRules(env) {
     return [
         configureTsLoader(env),
@@ -76,8 +61,7 @@ function generateRules(env) {
         },
         configureStylesLoader(),
         configureImageLoader(),
-        configureFontLoader(),
-        configureFileReplacementLoader(env)
+        configureFontLoader()
     ];
 }
 
