@@ -1,7 +1,5 @@
-  
 import React, { ReactElement } from 'react';
-import logo from '../assets/images/logo.svg';
-import './app.scss';
+import logo from './assets/images/logo.svg';
 
 
 function App(): ReactElement {
