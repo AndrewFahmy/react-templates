@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge'),
     configFactory = require('./webpack.common'),
+    path = require('path'),
     { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = configFactory('production');
