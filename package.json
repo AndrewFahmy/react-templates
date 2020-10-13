@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "npx webpack-dev-server --config ./config/webpack.dev.js",
-    "build": "npm run lint && npx webpack --config ./config/webpack.prod.js",
+    "build-staging": "npm run lint && npx webpack --config ./config/webpack.stating.js",
+    "build-prod": "npm run lint && npx webpack --config ./config/webpack.prod.js",
     "lint": "npx eslint src/*"
   },
   "keywords": [],

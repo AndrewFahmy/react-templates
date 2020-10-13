@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge'),
     path = require('path'),
     { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const config = generate('staging');
+const config = generate('development');
 
 config.plugins.unshift(new CleanWebpackPlugin());
 
