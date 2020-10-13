@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge'),
     path = require('path'),
     { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const config = generate('production');
+const config = generate('staging');
 
 config.plugins.unshift(new CleanWebpackPlugin());
 
@@ -15,7 +15,7 @@ module.exports = merge(config, {
                 test: path.resolve('src/environments/environment.ts'),
                 loader: 'file-replace-loader',
                 options: {
-                    replacement: path.resolve('src/environments/environment.prod.ts'),
+                    replacement: path.resolve('src/environments/environment.staging.ts'),
                     async: true
                 }
             }

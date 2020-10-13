@@ -92,7 +92,7 @@ function generate(env) {
 
     return {
         mode: env,
-        entry: './src/main',
+        entry: './src/index',
         output: {
             path: path.resolve(__dirname, '../dist'),
             filename: '[name]_[contenthash:8].js',
@@ -119,5 +119,15 @@ function generate(env) {
     };
 }
 
+class ErrorHandlingPlugin {
+    apply(compiler) {
+        compiler.hooks.done.tap('Error Handling Plugin', (stats) => {
+            if (stats.compilation.errors && stats.compilation.errors.length) {
+                console.error(stats.compilation.errors);
+                process.exit(1);
+            }
+        });
+    }
+}
 
-module.exports = generate;
+module.exports = {generate, ErrorHandlingPlugin};

@@ -1,8 +1,8 @@
 const { merge } = require('webpack-merge'),
-    configFactory = require('./webpack.common');
+    {generate} = require('./webpack.common');
 
 
-const config = configFactory('development');
+const config = generate('development');
 
 module.exports = merge(config, {
     devtool: 'inline-source-map',
