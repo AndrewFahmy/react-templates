@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge'),
-    {generate} = require('./webpack.common');
+    { generate } = require('./webpack.common');
 
 
 const config = generate('development');
@@ -10,6 +10,7 @@ module.exports = merge(config, {
         contentBase: './dist',
         compress: true,
         port: 3000,
-        historyApiFallback: true
+        historyApiFallback: true,
+        open: true
     }
 });
