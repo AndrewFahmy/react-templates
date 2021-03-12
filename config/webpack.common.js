@@ -1,7 +1,7 @@
 const path = require('path'),
     cssParsingPlugin = require('mini-css-extract-plugin'),
     jsPlugin = require('terser-webpack-plugin'),
-    cssOptimizationPlugin = require('optimize-css-assets-webpack-plugin'),
+    cssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
     htmlPlugin = require('html-webpack-plugin'),
     progressPlugin = require('simple-progress-webpack-plugin'),
     webpack = require('webpack');
@@ -99,7 +99,7 @@ function generate(env) {
             publicPath: '/'
         },
         optimization: {
-            minimizer: [new jsPlugin(), new cssOptimizationPlugin()],
+            minimizer: [new jsPlugin(), new cssMinimizerPlugin()],
             splitChunks: {
                 chunks: 'all',
                 filename: '[name]_[contenthash:8].js'
@@ -130,4 +130,4 @@ class ErrorHandlingPlugin {
     }
 }
 
-module.exports = {generate, ErrorHandlingPlugin};
+module.exports = { generate, ErrorHandlingPlugin };
